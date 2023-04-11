@@ -4,12 +4,13 @@ import unittest
 
 def count_words(frase):
     diccionario = {}
+    frase = frase.lower()
     palabras = frase.split(' ')  # Separa el texto en palabras
     for palabra in palabras:
       if palabra in diccionario:
-        diccionario[palabra.lower()] += 1
+        diccionario[palabra] += 1
       else:
-        diccionario[palabra.lower()] = 1
+        diccionario[palabra] = 1
     return(diccionario)
 
 
